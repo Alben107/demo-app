@@ -6,9 +6,11 @@ import ReduxIcon from "../../../assets/images/reduxIcon.png";
 import MuiIcon from "../../../assets/images/MuiIcon.png";
 import Icon from "../../../assets/images/trioIcon.jpg";
 import CustomCarousel from "../../ui/custom_carousel/index";
+import TypescriptIcon from "../../../assets/images/typescriptIcon.png";
+import BootstrapIcon from "../../../assets/images/bootstrapIconImage.png";
 
 function ImageContainer() {
-  const images = [ReactIcon, JavascriptIcon, ReduxIcon, MuiIcon];
+  const images = [ReactIcon, TypescriptIcon, ReduxIcon, BootstrapIcon];
 
   return (
     <div className="container vh-100px w-100px d-flex align-items-center justify-content-center">

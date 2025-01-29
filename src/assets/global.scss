@@ -9,11 +9,12 @@ body {
 
 .layout-container {
   width: 100%;
+  margin-top: 90px;
 }
 
 .home-page-container {
   padding: 1% 10%;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #f7f7f7;
 }
@@ -23,6 +24,42 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+}
+
+.header-home {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 10%;
+  // width: 100%;
+  z-index: 1000;
+  background-color: #f7f7f7;
+  // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.footer {
+  // position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f7f7f7;
+  color: #3d3d3d;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  z-index: 1000;
+  margin-top: 10px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.social-icons-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: fit-content;
+  gap: 20px;
 }
 
 .filter-bar {
@@ -159,18 +196,43 @@ body {
   align-items: center;
 }
 
-.checkbox-group label {
-  margin-left: 5px;
-  font-size: 0.9rem;
+.text-label-styles {
+  font-size: 16px;
+  color: #3d3d3d;
+  font-weight: 600;
+  margin: 0 10px;
+}
+.checkbox-field {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  background-color: #f2f2f2;
+  border: 2px solid #3d3d3d;
+  border-radius: 0px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.checkbox-field:checked {
+  background-color: #3d3d3d;
+}
+.checkbox-field:checked::before {
+  content: "✔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .login-button {
   width: 100%;
   padding: 10px;
-  background-color: #333;
+  background-color: #3d3d3d;
   color: #fff;
   border: none;
-  border-radius: 4px;
   cursor: pointer;
   margin-top: 10px;
 }
@@ -180,6 +242,7 @@ body {
 }
 
 .error-message {
+  font-size: small;
   color: rgb(231, 1, 1);
 }
 
@@ -198,14 +261,15 @@ body {
 .social-btn {
   width: 40px;
   height: 40px;
-  border: 1px solid #ddd;
+  border: 2px solid #3d3d3d;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  background: #fff;
+  background-color: #fff;
   font-size: 1rem;
+  color: #3d3d3d;
 }
 
 .social-btn:hover {
@@ -263,4 +327,11 @@ body {
 }
 .divider::after {
   margin-left: 10px;
+}
+
+.loader-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
 }

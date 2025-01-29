@@ -80,9 +80,16 @@ const LoginForm: React.FC = () => {
                   />
                 </div>
                 <div className="form-group checkbox-group">
-                  <Field type="checkbox" name="keepSignedIn" />
-                  <label htmlFor="keepSignedIn">Keep me signed in</label>
+                  <Field
+                    type="checkbox"
+                    name="keepSignedIn"
+                    className="checkbox-field"
+                  />
+                  <label className="text-label-styles" htmlFor="keepSignedIn">
+                    Keep me signed in
+                  </label>
                 </div>
+
                 <button type="submit" className="login-button">
                   Sign In
                 </button>

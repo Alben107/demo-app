@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = () => {
   };
 
   return (
-    <header className="w-100">
+    <header className="w-100 header-home">
       <Navbar expand="lg" className="container px-2 py-3 d-none d-lg-flex">
         <Navbar.Brand className="me-auto fw-bold">Countries</Navbar.Brand>
         <FilterComponent

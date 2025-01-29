@@ -4,6 +4,7 @@ import { useGetAllCountriesQuery } from "../../../utils/endpoints/countryAPI";
 import { useFilteredCountries } from "../../../utils/hooks/useFilteredCountry";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
+import { CircularProgress } from "@mui/material";
 
 interface Country {
   name: string;
@@ -34,8 +35,13 @@ const CardContainer: React.FC = () => {
     resetVisibleCount();
   }, [filter]);
 
-  if (isLoading) return <p>Loading...</p>;
-  if (error) return <p>Error loading countries</p>;
+  if (isLoading)
+    return (
+      <div className="loader-div">
+        <CircularProgress />
+      </div>
+    );
+  if (error) return <div className="loader-div">Error loading countries</div>;
 
   return (
     <div className="container my-4">
@@ -52,7 +58,7 @@ const CardContainer: React.FC = () => {
       </div>
       {visibleCount < filteredCountries?.length && (
         <div className="d-flex justify-content-center mt-4">
-          <button className="btn btn-dark" onClick={handleLoadMore}>
+          <button className="btn btn-dark rounded-0" onClick={handleLoadMore}>
             Load More
           </button>
         </div>
